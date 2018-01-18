@@ -1,9 +1,9 @@
 package com.ryl.commonlib.utils;
 
-import android.support.v4.BuildConfig;
 import android.util.Log;
 
 import com.apkfuns.logutils.LogUtils;
+import com.ryl.commonlib.values.IsOnDebug;
 
 
 /**

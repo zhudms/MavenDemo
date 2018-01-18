@@ -1,4 +1,4 @@
-package com.ryl.commonlib.utils;
+package com.ryl.commonlib.values;
 
 /**
  * Created by rongyile on 2018/1/18.
