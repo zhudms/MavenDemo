@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'
+//apply plugin: 'com.novoda.bintray-release'
 android {
     compileSdkVersion 26
 
@@ -38,13 +38,13 @@ dependencies {
 }
 
 
-publish {
-
-    userOrg ='zhudms'//bintray.com用户名
-    groupId ='zhudms.maven.SelfCommonLib'//jcenter上的路径(正常路径不需要加SelfCommonLib)
-    artifactId = 'eventbuslib'//项目名称
-    publishVersion = '0.0.1'//版本号
-    desc = 'this is a lib' //描述，不重要
-    website = 'https://github.com/zhudms/MavenDemo'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
-}
+//publish {
+//
+//    userOrg ='zhudms'//bintray.com用户名
+//    groupId ='zhudms.maven.SelfCommonLib'//jcenter上的路径(正常路径不需要加SelfCommonLib)
+//    artifactId = 'eventbuslib'//项目名称
+//    publishVersion = '0.0.1'//版本号
+//    desc = 'this is a lib' //描述，不重要
+//    website = 'https://github.com/zhudms/MavenDemo'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
+//}
 
