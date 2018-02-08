@@ -4,9 +4,9 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.ryl.commonlib.utils.PromissionResult;
+import com.ryl.commonlib.utils.PermissionResult;
 import com.ryl.commonlib.utils.LU;
-import com.ryl.commonlib.utils.PromisionU;
+import com.ryl.commonlib.utils.PermissionU;
 import com.ryl.commonlib.utils.ToastU;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,10 +25,10 @@ public class MainActivity extends AppCompatActivity {
         ToastU.ht(MainActivity.this, "isDebug");
 
 
-        PromissionResult.CheckPermissionResult result = PromisionU.checkPromissions(
+        PermissionResult.CheckPermissionResult result = PermissionU.checkPermissions(
                 MainActivity.this, promissions, 3);
-        if (result == PromissionResult.CheckPermissionResult.ACCESS ||
-                result == PromissionResult.CheckPermissionResult.SDK_LOWER) {
+        if (result == PermissionResult.CheckPermissionResult.ACCESS ||
+                result == PermissionResult.CheckPermissionResult.SDK_LOWER) {
             ToastU.toast(MainActivity.this, "getAll");
         }
     }
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-      PromisionU.PromissionRequestResult result=  PromisionU.isSuccess(grantResults, permissions);
+      PermissionResult.PermissionRequestResult result=  PermissionU.isSuccess(grantResults, permissions);
 
       if (result.isSuccess){
           ToastU.toast(MainActivity.this,"requestSuccess");

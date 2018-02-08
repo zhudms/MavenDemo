@@ -9,16 +9,19 @@ import android.support.v4.content.ContextCompat;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import com.ryl.commonlib.utils.PromissionResult.CheckPermissionResult;
+import com.ryl.commonlib.utils.PermissionResult.CheckPermissionResult;
 
 
 /**
  * Created by rongyile on 2017/12/5.
  */
 
-public class PromisionU {
+public class PermissionU {
 
-    public static CheckPermissionResult checkPromissions(Activity mContext, String[] mPermissions, int requestCode) {
+    public static final String SD_READ="android.permission.READ_EXTERNAL_STORAGE";
+    public static final String SD_WRITE="android.permission.WRITE_EXTERNAL_STORAGE";
+
+    public static CheckPermissionResult checkPermissions(Activity mContext, String[] mPermissions, int requestCode) {
 
         if (Build.VERSION.SDK_INT < 23 || mPermissions == null) {
             return CheckPermissionResult.SDK_LOWER;
@@ -48,8 +51,8 @@ public class PromisionU {
     /**
      * 只要有一个失败,则返回失败
      *
-     * @param results
-     * @return
+     * @param results 请求权限返回的结果集
+     * @return 是否全部成功
      */
     public static boolean isSuccess(int[] results) {
         for (int r : results) {
@@ -66,12 +69,12 @@ public class PromisionU {
      *
      * @param results    请求结果
      * @param promission 对应的权限数组
-     * @return
+     * @return 是否全部请求成功
      */
-    public static PromissionResult.PromissionRequestResult isSuccess(int[] results, String[] promission) {
+    public static PermissionResult.PermissionRequestResult isSuccess(int[] results, String[] promission) {
 
         boolean isSuccess = true;
-        ArrayList<String> failList = new ArrayList<String>(results.length > 12 ? 12 : results.length);//Arraylist 默认长度12
+        ArrayList<String> failList = new ArrayList<String>(results.length);//减少内存分配次数或内存浪费
 
         for (int i = 0; i < results.length; i++) {
 
@@ -84,9 +87,9 @@ public class PromisionU {
         }
 
         if (isSuccess) {
-            return new PromissionResult.PromissionRequestResult(true);
+            return new PermissionResult.PermissionRequestResult(true);
         } else {
-            return new PromissionResult.PromissionRequestResult(false, failList);
+            return new PermissionResult.PermissionRequestResult(false, failList);
         }
     }
 

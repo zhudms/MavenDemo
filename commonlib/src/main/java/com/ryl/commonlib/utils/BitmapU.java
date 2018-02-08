@@ -15,10 +15,10 @@ public class BitmapU {
     /**
      * 此方法只用来处理小图片,大图未做 OOM 处理
      *
-     * @param resource
-     * @param tagWidth
-     * @param tagHeight
-     * @return
+     * @param resource 源数据
+     * @param tagWidth 目标宽度
+     * @param tagHeight 目标高度
+     * @return 变换后的数据
      */
     public static Bitmap getTagSizeBitmap(Bitmap resource, int tagWidth, int tagHeight) {
 
