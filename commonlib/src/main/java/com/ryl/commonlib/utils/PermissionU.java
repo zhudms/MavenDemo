@@ -49,10 +49,10 @@ public class PermissionU {
     }
 
     /**
-     * åªè¦æœ‰ä¸€ä¸ªå¤±è´¥,åˆ™è¿”å›å¤±è´¥
+     * Ö»ÒªÓĞÒ»¸öÊ§°Ü,Ôò·µ»ØÊ§°Ü
      *
-     * @param results è¯·æ±‚æƒé™è¿”å›çš„ç»“æœé›†
-     * @return æ˜¯å¦å…¨éƒ¨æˆåŠŸ
+     * @param results ÇëÇóÈ¨ÏŞ·µ»ØµÄ½á¹û¼¯
+     * @return ÊÇ·ñÈ«²¿³É¹¦
      */
     public static boolean isSuccess(int[] results) {
         for (int r : results) {
@@ -65,16 +65,16 @@ public class PermissionU {
     }
 
     /**
-     * å½“æœ‰String[]æ•°ç»„ä¼ å…¥æ—¶,è¯·æ±‚å¤±è´¥æ—¶,ä¼šå°†è¯·æ±‚å¤±è´¥çš„æƒé™æŒ‰ç…§ Arraylistçš„å½¢å¼è¿”å›
+     * µ±ÓĞString[]Êı×é´«ÈëÊ±,ÇëÇóÊ§°ÜÊ±,»á½«ÇëÇóÊ§°ÜµÄÈ¨ÏŞ°´ÕÕ ArraylistµÄĞÎÊ½·µ»Ø
      *
-     * @param results    è¯·æ±‚ç»“æœ
-     * @param promission å¯¹åº”çš„æƒé™æ•°ç»„
-     * @return æ˜¯å¦å…¨éƒ¨è¯·æ±‚æˆåŠŸ
+     * @param results    ÇëÇó½á¹û
+     * @param promission ¶ÔÓ¦µÄÈ¨ÏŞÊı×é
+     * @return ÊÇ·ñÈ«²¿ÇëÇó³É¹¦
      */
     public static PermissionResult.PermissionRequestResult isSuccess(int[] results, String[] promission) {
 
         boolean isSuccess = true;
-        ArrayList<String> failList = new ArrayList<String>(results.length);//å‡å°‘å†…å­˜åˆ†é…æ¬¡æ•°æˆ–å†…å­˜æµªè´¹
+        ArrayList<String> failList = new ArrayList<String>(results.length);
 
         for (int i = 0; i < results.length; i++) {
 

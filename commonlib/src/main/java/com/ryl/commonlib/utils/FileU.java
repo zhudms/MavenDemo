@@ -6,7 +6,7 @@ import android.text.TextUtils;
 import java.io.File;
 
 /**
- * ä¸ä¼šåˆ¤æ–­è¯»å†™æƒé™,éœ€è¦åº”ç”¨æå‰æ£€æŸ¥æƒé™
+ * ²»»áÅĞ¶Ï¶ÁĞ´È¨ÏŞ,ĞèÒªÓ¦ÓÃÌáÇ°¼ì²éÈ¨ÏŞ
  * Created by rongyile on 2018/2/1.
  */
 
@@ -14,16 +14,16 @@ public class FileU {
 
 
     /**
-     * è·å–sdå¡è·¯å¾„
+     * »ñÈ¡sd¿¨Â·¾¶
      *
-     * @return SD å¡æ ¹ç›®å½•
+     * @return SD ¿¨¸ùÄ¿Â¼
      */
     public static String getSDPath() {
         File sdDir = null;
         boolean sdCardExist = Environment.getExternalStorageState()
-                .equals(android.os.Environment.MEDIA_MOUNTED); //åˆ¤æ–­sdå¡æ˜¯å¦å­˜åœ¨
+                .equals(android.os.Environment.MEDIA_MOUNTED); //ÅĞ¶Ïsd¿¨ÊÇ·ñ´æÔÚ
         if (sdCardExist) {
-            sdDir = Environment.getExternalStorageDirectory();//è·å–è·Ÿç›®å½•
+            sdDir = Environment.getExternalStorageDirectory();//»ñÈ¡¸úÄ¿Â¼
         } else {
             return null;
         }
@@ -60,10 +60,10 @@ public class FileU {
     }
 
     /**
-     * è·å–æ–‡ä»¶å¤§å°(åªæ˜¯æ–‡ä»¶,,å½“æ–‡ä»¶æ˜¯æ–‡ä»¶å¤¹æ—¶,è¿”å›0)
+     * »ñÈ¡ÎÄ¼ş´óĞ¡(Ö»ÊÇÎÄ¼ş,,µ±ÎÄ¼şÊÇÎÄ¼ş¼ĞÊ±,·µ»Ø0)
      *
-     * @param path æ–‡ä»¶è·¯å¾„
-     * @return æ–‡ä»¶å¤§å°
+     * @param path ÎÄ¼şÂ·¾¶
+     * @return ÎÄ¼ş´óĞ¡
      */
     public static double getFileLength(String path) {
         if (isFloder(path)) {

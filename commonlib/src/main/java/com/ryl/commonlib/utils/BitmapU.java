@@ -13,9 +13,9 @@ public class BitmapU {
     public static final int TAG_FREE = -1;
 
     /**
-     * 此方法只用来处理小图片,大图未做 OOM 处理
      *
-     * @param resource 源数据
+     * didn't take care of oom
+     * @param resource yuanshuju
      * @param tagWidth 目标宽度
      * @param tagHeight 目标高度
      * @return 变换后的数据
