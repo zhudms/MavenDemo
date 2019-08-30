@@ -26,12 +26,12 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
+//    implementation 'com.android.support:appcompat-v7:26.1.0'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    implementation 'com.apkfuns.logutils:library:1.5.1.1'
+//    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+//    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+//    implementation 'com.apkfuns.logutils:library:1.5.1.1'
 }
 
 //
@@ -39,7 +39,7 @@ publish {
     userOrg = 'zhudms'//bintray.com用户名
     groupId = 'zhudms.maven.SelfCommonLib'//jcenter上的路径
     artifactId = 'SelfLib'//项目名称
-    publishVersion = '0.0.14'//版本号
+    publishVersion = '0.0.15'//版本号
     desc = 'this is a lib' //描述，不重要
     website = 'https://github.com/zhudms/MavenDemo'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
 }
